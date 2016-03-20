@@ -52,11 +52,20 @@ var sand = <minecraft:sand>;
 var water = <liquid:water>;
 var wetCokeBrick = <Railcraft:brick.sandy>;
 var steamoven = <Railcraft:machine.alpha:3>;
+var cartBatbox = <Railcraft:cart.energy.batbox>;
+var cartCESU = <Railcraft:cart.energy.cesu>;
+var cartMFE = <Railcraft:cart.energy.mfe>;
 
 # Block/item Removal
 
 recipes.remove(steamoven);
 steamoven.addTooltip(format.red(format.bold("This item is DISABLED!")));
+recipes.remove(cartBatbox);
+cartBatbox.addTooltip(format.red(format.bold("This item is DISABLED!")));
+recipes.remove(cartCESU);
+cartCESU.addTooltip(format.red(format.bold("This item is DISABLED!")));
+recipes.remove(cartMFE);
+cartMFE.addTooltip(format.red(format.bold("This item is DISABLED!")));
 
 # Recipe tweaks
 recipes.remove(railStandard);
@@ -67,11 +76,6 @@ recipes.remove(railElectric);
 // Remove all Rock Crusher recipes
 mods.railcraft.RockCrusher.removeRecipe(<*>);
 
-recipes.remove(upgradeLapotronLoader);
-recipes.addShaped(upgradeLapotronLoader, [
-	[glass, glass, glass],
-	[cablePlatinum, crystalLapotron, cablePlatinum],
-	[glass, circuitAdvanced, glass]]);
 recipes.remove(fireboxSolid);
 recipes.addShaped(fireboxSolid, [
 	[brickAbyssal, brickAbyssal, brickAbyssal],

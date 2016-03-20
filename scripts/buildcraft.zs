@@ -210,6 +210,7 @@ var Saw = <ore:craftingToolSaw>;
 var screwdriver = <ore:craftingToolScrewdriver>;
 var SHammer = <ore:craftingToolSoftHammer>;
 var smallAnyIronGear = <ore:gearGtSmallAnyIron>;
+var stainlesssteeltip = <ore:toolHeadDrillStainlessSteel>;
 var stone = <minecraft:stone>;
 var stoneCobble = <ore:stoneCobble>;
 var stoneKinesisPipe = <BuildCraft|Transport:item.buildcraftPipe.pipepowerstone>;
@@ -231,15 +232,15 @@ var wrench = <ore:craftingToolWrench>;
 recipes.remove(BCRefinery);
 BCRefinery.addTooltip(format.red(format.bold("This item is DISABLED!")));
 recipes.remove(BCGearWood);
-NEI.hide(BCGearWood);
+BCGearWood.addTooltip(format.red(format.bold("This item is DISABLED!")));
 recipes.remove(BCGearStone);
-NEI.hide(BCGearStone);
+BCGearStone.addTooltip(format.red(format.bold("This item is DISABLED!")));
 recipes.remove(BCGearIron);
-NEI.hide(BCGearIron);
+BCGearIron.addTooltip(format.red(format.bold("This item is DISABLED!")));
 recipes.remove(BCGearGold);
-NEI.hide(BCGearGold);
+BCGearGold.addTooltip(format.red(format.bold("This item is DISABLED!")));
 recipes.remove(BCGearDiamond);
-NEI.hide(BCGearDiamond);
+BCGearDiamond.addTooltip(format.red(format.bold("This item is DISABLED!")));
 recipes.remove(BCPump);
 BCPump.addTooltip(format.red(format.bold("This item is DISABLED!")));
 recipes.remove(quarry);
@@ -298,7 +299,7 @@ recipes.remove(miningWell);
 recipes.addShaped(miningWell, [
 	[plateSteel, blockRedstone, plateSteel],
 	[plateIron, gearIron, plateIron],
-	[plateIron, miningDrill, plateIron]]);
+	[plateIron, stainlesssteeltip, plateIron]]);
 recipes.remove(autoWorkbench);
 recipes.addShaped(autoWorkbench, [
     [itemCasingIron, smallAnyIronGear, itemCasingIron],
