@@ -25,6 +25,9 @@ var lapis	= <ore:gemLapis>;
 var dustLapis	= <ore:dustLapis>;
 var coal	= <ore:gemCoal>;
 var dustCoal	= <ore:dustCoal>;
+var ironBars	= <minecraft:iron_bars>;
+var rodIron	= <ore:stickIron>;
+var Wrench	= <ore:craftingToolWrench>;
 
 # OreDictionary
 potionHealing.add(<minecraft:potion:8197>);
@@ -64,6 +67,11 @@ recipes.addShaped(sensorDaylight, [
     [gemNetherQuartz, gemNetherQuartz, gemNetherQuartz],
     [slabWood, slabWood, slabWood]]);
 recipes.addShapeless(buttonWood, [plankWood]);
+recipes.remove(ironBars);
+recipes.addShaped(ironBars * 8, [
+	[null, Wrench, null],
+	[rodIron, rodIron, rodIron],
+	[rodIron, rodIron, rodIron]]);
 
 # Removal of Brewing Stand
 recipes.remove(<minecraft:brewing_stand>);
