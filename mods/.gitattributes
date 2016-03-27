@@ -1,1 +1,2 @@
 .\logisticspipes-0.9.3.103.jar filter=lfs diff=lfs merge=lfs -text
+.\gregtech-5.09.20.jar filter=lfs diff=lfs merge=lfs -text
