@@ -10,18 +10,9 @@ import mods.gregtech.CuttingSaw;
 import mods.nei.NEI;
 import minetweaker.game.IGame;
 import mods.ic2.Compressor;
+import minetweaker.item.IIngredient;
 
 # Aliases
-var CESU                    = <IC2:blockElectric:7>;
-var GTDough                 = <gregtech:gt.metaitem.02:32559>;
-var HHammer                 = <ore:craftingToolHardHammer>;
-var MFE                     = <IC2:blockElectric:1>;
-var MFSU                    = <IC2:blockElectric:2>;
-var MOX                     = <IC2:itemMOX>;
-var ODScanner               = <IC2:itemScanner:*>;
-var OVScanner               = <IC2:itemScannerAdv>;
-var Screwdriver             = <ore:craftingToolScrewdriver>;
-var Wrench                  = <ore:craftingToolWrench>;
 var advancedMiner           = <IC2:blockMachine2:11>;
 var anyWater                = <ore:listAllwater>;
 var batbox                  = <IC2:blockElectric>;
@@ -33,6 +24,7 @@ var cableCopperAnnealed1x   = <gregtech:gt.blockmachines:1386>;
 var cableElectrum4x         = <gregtech:gt.blockmachines:1448>;
 var cableGold1x             = <ore:cableGt01Gold>;
 var cableGold2x             = <ore:cableGt02Gold>;
+var CESU                    = <IC2:blockElectric:7>;
 var chainsaw                = <IC2:itemToolChainsaw:*>;
 var chargePadBatbox         = <IC2:blockChargepad>;
 var chargePadCESU           = <IC2:blockChargepad:1>;
@@ -61,6 +53,8 @@ var fuelRodMOX              = <IC2:reactorMOXSimple:1>;
 var fuelRodThorium          = <gregtech:gt.Thoriumcell>;
 var fuelRodUranium          = <IC2:reactorUraniumSimple:1>;
 var genKinWind              = <IC2:blockKineticGenerator>;
+var GTDough                 = <gregtech:gt.metaitem.02:32559>;
+var HHammer                 = <ore:craftingToolHardHammer>;
 var ic2BlastFurnace         = <IC2:blockMachine3:1>;
 var ic2BlockCuttingMachine  = <IC2:blockMachine3:2>;
 var ic2Compressor           = <IC2:blockMachine:5>;
@@ -91,11 +85,17 @@ var itemDustTinySalt        = <gregtech:gt.metaitem.01:817>;
 var itemSteelCasing         = <IC2:itemCasing:5>;
 var machineCasingAdvanced   = <IC2:blockMachine:12>;
 var machineHullHV           = <gregtech:gt.blockmachines:13>;
+var MFE                     = <IC2:blockElectric:1>;
+var MFSU                    = <IC2:blockElectric:2>;
 var miner                   = <IC2:blockMachine:7>;
 var miningDrill             = <IC2:itemToolDrill:*>;
 var moduleConveyorHV        = <gregtech:gt.metaitem.01:32632>;
 var motorElectricHV         = <gregtech:gt.metaitem.01:32602>;
+var MOX                     = <IC2:itemMOX>;
 var nuggetSteel             = <gregtech:gt.metaitem.01:9305>;
+var ODScanner               = <IC2:itemScanner:*>;
+var OVScanner               = <IC2:itemScannerAdv>;
+var plantball               = <IC2:itemFuelPlantBall>;
 var pistonElectricHV        = <gregtech:gt.metaitem.01:32642>;
 var plateAlloyAdvanced      = <ore:plateAlloyAdvanced>;
 var plateCarbon             = <ore:plateAlloyCarbon>;
@@ -120,16 +120,18 @@ var rotorCarbon             = <IC2:itemwcarbonrotor>;
 var rotorIron               = <IC2:itemironrotor>;
 var rotorSteel              = <IC2:itemsteelrotor>;
 var rotorWood               = <IC2:itemwoodrotor>;
+var sapling                 = <ore:treeSapling>;
+var Screwdriver             = <ore:craftingToolScrewdriver>;
 var screwIridium            = <ore:screwIridium>;
 var screwIron               = <ore:screwIron>;
 var sensorHV                = <gregtech:gt.metaitem.01:32692>;
 var shaftIron               = <IC2:itemRecipePart:11>;
 var shaftSteel              = <IC2:itemRecipePart:12>;
 var stickIron               = <ore:stickIron>;
+var sugarcane               = <minecraft:reeds>;
 var teleporter              = <IC2:blockMachine2>;
 var uraniumEnriched         = <IC2:itemUran>;
-var plantball               = <IC2:itemFuelPlantBall>;
-var sapling                 = <ore:treeSapling>;
+var Wrench                  = <ore:craftingToolWrench>;
 
 # seeds
 
@@ -547,42 +549,18 @@ game.setLocalization("ic2.fluidBiomass", "Industrial Biomass");
 <ore:dustTinyAnyCopper>.remove(<gregtech:gt.metaitem.01:345>);          // Annealed Copper Dust (Tiny)
 <ore:nuggetAnyCopper>.remove(<gregtech:gt.metaitem.01:9345>);           // Annealed Copper Nugget
 
+# Burn Value fix
+furnace.setFuel(<gregtech:gt.metaitem.01:17809>, 100);
+
 # Charcoal
 var charcoal = <minecraft:coal:1>;
-var logWood = <minecraft:log:*>;
-var logWood2 = <minecraft:log2:*>;
-var logWood3 = <ExtrabiomesXL:log1:*>;
-var logWood4 = <ExtrabiomesXL:log2:*>;
-var logWood5 = <ExtrabiomesXL:mini_log_1>;
-var logWood6 = <ExtrabiomesXL:cornerlog_baldcypress>;
-var logWood7 = <ExtrabiomesXL:cornerlog_rainboweucalyptus>;
-var logWood8 = <ExtrabiomesXL:cornerlog_oak>;
-var logWood9 = <ExtrabiomesXL:cornerlog_fir>;
-var logWood10 = <ExtrabiomesXL:cornerlog_redwood>;
-var logWood11 = <ExtrabiomesXL:log_elbow_baldcypress>;
-var logWood12 = <ExtrabiomesXL:log_elbow_rainbow_eucalyptus>;
-var logWood13 = <Forestry:logs>;
-var logWood14 = <Forestry:logsFireproof>;
-var logWood15 = <Thaumcraft:blockMagicalLog:*>;
-var logWood16 = <IC2:blockRubWood>;
+var logWood = [<minecraft:log:*>, <minecraft:log2:*>, <ExtrabiomesXL:log1:*>, <ExtrabiomesXL:log2:*>, <ExtrabiomesXL:mini_log_1>, <ExtrabiomesXL:cornerlog_baldcypress>, <ExtrabiomesXL:cornerlog_rainboweucalyptus>, <ExtrabiomesXL:cornerlog_oak>, <ExtrabiomesXL:cornerlog_fir>, <ExtrabiomesXL:cornerlog_redwood>, <ExtrabiomesXL:log_elbow_baldcypress>, <ExtrabiomesXL:log_elbow_rainbow_eucalyptus>, <Forestry:logs>, <Forestry:logsFireproof>, <Thaumcraft:blockMagicalLog:*>, <IC2:blockRubWood>] as IIngredient[];
 var oxygen = <liquid:oxygen>;
 
 //ArcFurnace.addRecipe([output1, output2, output3, output4], input, liquid, [chance1, chance2, chance3, chance4], durationTicks, euPerTick);
-ArcFurnace.addRecipe([charcoal], logWood, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood2, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood3, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood4, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood5, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood6, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood7, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood8, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood9, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood10, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood11, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood12, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood13, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood14, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood15, oxygen * 25, [10000], 160, 32);
-ArcFurnace.addRecipe([charcoal], logWood16, oxygen * 25, [10000], 160, 32);
+for log in logWood {
+    ArcFurnace.addRecipe([charcoal], log, oxygen * 25, [10000], 160, 32);
+}
 
 Compressor.addRecipe(plantball, sapling * 4);
+Compressor.addRecipe(plantball, sugarcane * 8);
