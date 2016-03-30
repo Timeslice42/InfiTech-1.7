@@ -7,10 +7,12 @@ import mods.gregtech.PlasmaArcFurnace;
 import mods.ic2.SemiFluidGenerator;
 import mods.gregtech.Printer;
 import mods.gregtech.CuttingSaw;
+import mods.gregtech.Mixer;
 import mods.nei.NEI;
 import minetweaker.game.IGame;
 import mods.ic2.Compressor;
 import minetweaker.item.IIngredient;
+import minetweaker.item.IItemStack;
 
 # Aliases
 var advancedMiner           = <IC2:blockMachine2:11>;
@@ -39,7 +41,6 @@ var coil                    = <IC2:itemRecipePart>;
 var craftingGenerator       = <ore:craftingGenerator>;
 var cropHarvester           = <IC2:blockMachine3:7>;
 var diamondDrill            = <IC2:itemToolDDrill:*>;
-var dough                   = <gregtech:gt.metaitem.02:32559>;
 var dustGlowstone           = <ore:dustGlowstone>;
 var dustLead                = <ore:dustLead>;
 var dustSulfur              = <ore:dustSulfur>;
@@ -50,13 +51,14 @@ var electricWrench          = <IC2:itemToolWrenchElectric:*>;
 var energiumDust            = <IC2:itemDust2:2>;
 var energyCrystal           = <IC2:itemBatCrystal:*>;
 var foodSalt                = <ore:foodSalt>;
-var flour                   = <gregtech:gt.metaitem.01:2881>;
 var fuelRodEmpty            = <IC2:itemFuelRod>;
 var fuelRodMOX              = <IC2:reactorMOXSimple:1>;
 var fuelRodThorium          = <gregtech:gt.Thoriumcell>;
 var fuelRodUranium          = <IC2:reactorUraniumSimple:1>;
 var genKinWind              = <IC2:blockKineticGenerator>;
 var GTDough                 = <gregtech:gt.metaitem.02:32559>;
+var GTFlour					= <gregtech:gt.metaitem.01:2881>;
+var GTSalt					= <gregtech:gt.metaitem.01:2817>;
 var HHammer                 = <ore:craftingToolHardHammer>;
 var ic2BlastFurnace         = <IC2:blockMachine3:1>;
 var ic2BlockCuttingMachine  = <IC2:blockMachine3:2>;
@@ -453,8 +455,6 @@ recipes.remove(itemRingWood);
 recipes.addShaped(itemRingWood, [
     [Saw],
     [itemPlankWood]]);
-recipes.remove(GTDough);
-recipes.addShapeless(GTDough, [anyWater, dustWheat]);
 recipes.remove(reBatteryAdv);
 recipes.addShaped(reBatteryAdv, [
     [cableCopperAnnealed1x, itemCasingBronze, cableCopperAnnealed1x],
@@ -574,5 +574,11 @@ for log in logWood {
 }
 
 # Food Tweaks
-recipe.remove(dough);
-recipe.addShapeless(dough, [anyWater, foodSalt, flour]); # Not using oredict flour so that PHC dough can still be crafted
+recipes.remove(GTDough);
+# Not using oredict flour so that PHC dough can still be crafted
+recipes.addShapeless(GTDough, [anyWater, foodSalt, dustWheat]);
+recipes.addShapeless(GTDough, [anyWater, GTSalt, dustWheat]);
+//Mixer
+//OutputStack, OutputFluid (optional), InputArray, FluidInput, Time in Ticks, EnergyUsage
+Mixer.addRecipe(GTDough * 2, null, [GTFlour, <InfinityCore:itemMaterial:16>], <liquid:water> * 1000, 32, 256);
+Mixer.addRecipe(GTDough * 2, null, [GTFlour, GTSalt], <liquid:water> * 1000, 32, 256);
