@@ -127,7 +127,7 @@ var rotorCarbon             = <IC2:itemwcarbonrotor>;
 var rotorIron               = <IC2:itemironrotor>;
 var rotorSteel              = <IC2:itemsteelrotor>;
 var rotorWood               = <IC2:itemwoodrotor>;
-var sapling                 = <ore:treeSapling>;
+var sapling                 = <minecraft:sapling:*>;
 var Saw                     = <ore:craftingToolSaw>;
 var Screwdriver             = <ore:craftingToolScrewdriver>;
 var screwIridium            = <ore:screwIridium>;
@@ -580,5 +580,5 @@ recipes.addShapeless(GTDough, [anyWater, foodSalt, dustWheat]);
 recipes.addShapeless(GTDough, [anyWater, GTSalt, dustWheat]);
 //Mixer
 //OutputStack, OutputFluid (optional), InputArray, FluidInput, Time in Ticks, EnergyUsage
-Mixer.addRecipe(GTDough * 2, null, [GTFlour, <InfinityCore:itemMaterial:16>], <liquid:water> * 1000, 32, 256);
-Mixer.addRecipe(GTDough * 2, null, [GTFlour, GTSalt], <liquid:water> * 1000, 32, 256);
+Mixer.addRecipe(GTDough * 2, null, [GTFlour, <InfinityCore:itemMaterial:16>], <liquid:water> * 1000, 31, 256);
+Mixer.addRecipe(GTDough * 2, null, [GTFlour, GTSalt], <liquid:water> * 1000, 31, 256);
