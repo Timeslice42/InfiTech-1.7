@@ -6,6 +6,7 @@ import mods.gregtech.ArcFurnace;
 import mods.gregtech.PlasmaArcFurnace;
 import mods.ic2.SemiFluidGenerator;
 import mods.gregtech.Printer;
+import mods.gregtech.Centrifuge;
 import mods.gregtech.CuttingSaw;
 import mods.gregtech.Mixer;
 import mods.nei.NEI;
@@ -26,6 +27,7 @@ var cableCopperAnnealed1x   = <gregtech:gt.blockmachines:1386>;
 var cableElectrum4x         = <gregtech:gt.blockmachines:1448>;
 var cableGold1x             = <ore:cableGt01Gold>;
 var cableGold2x             = <ore:cableGt02Gold>;
+var cellLargeSteel          = <gregtech:gt.metaitem.01:32405>;
 var CESU                    = <IC2:blockElectric:7>;
 var chainsaw                = <IC2:itemToolChainsaw:*>;
 var chargePadBatbox         = <IC2:blockChargepad>;
@@ -43,6 +45,7 @@ var cropHarvester           = <IC2:blockMachine3:7>;
 var diamondDrill            = <IC2:itemToolDDrill:*>;
 var dustGlowstone           = <ore:dustGlowstone>;
 var dustLead                = <ore:dustLead>;
+var dustRedstone            = <ore:dustRedstone>;
 var dustSulfur              = <ore:dustSulfur>;
 var dustThorium             = <gregtech:gt.metaitem.01:2096>;
 var dustWheat               = <ore:dustWheat>;
@@ -57,8 +60,8 @@ var fuelRodThorium          = <gregtech:gt.Thoriumcell>;
 var fuelRodUranium          = <IC2:reactorUraniumSimple:1>;
 var genKinWind              = <IC2:blockKineticGenerator>;
 var GTDough                 = <gregtech:gt.metaitem.02:32559>;
-var GTFlour					= <gregtech:gt.metaitem.01:2881>;
-var GTSalt					= <gregtech:gt.metaitem.01:2817>;
+var GTFlour                 = <gregtech:gt.metaitem.01:2881>;
+var GTSalt                  = <gregtech:gt.metaitem.01:2817>;
 var HHammer                 = <ore:craftingToolHardHammer>;
 var ic2BlastFurnace         = <IC2:blockMachine3:1>;
 var ic2BlockCuttingMachine  = <IC2:blockMachine3:2>;
@@ -85,12 +88,14 @@ var ingotSteel              = <ore:ingotSteel>;
 var iridiumDrill            = <IC2:itemToolIridiumDrill:*>;
 var itemCasingBronze        = <IC2:itemCasing:2>;
 var itemCasingGold          = <IC2:itemCasing:3>;
+var itemCasingIron          = <IC2:itemCasing:4>;
 var itemDustSalt            = <gregtech:gt.metaitem.01:2817>;
 var itemDustSmallSalt       = <gregtech:gt.metaitem.01:1817>;
 var itemDustTinySalt        = <gregtech:gt.metaitem.01:817>;
 var itemPlankWood           = <gregtech:gt.metaitem.01:17809>;
 var itemRingWood            = <gregtech:gt.metaitem.01:28809>;
 var itemSteelCasing         = <IC2:itemCasing:5>;
+var jetpack                 = <IC2:itemArmorJetpack:27>;
 var machineCasingAdvanced   = <IC2:blockMachine:12>;
 var machineHullHV           = <gregtech:gt.blockmachines:13>;
 var MFE                     = <IC2:blockElectric:1>;
@@ -529,6 +534,17 @@ game.setLocalization("ic2.fluidBiomass", "Industrial Biomass");
 <ore:blockYellowStripes>.add(<gregtech:gt.blockcasings3:1>);
 <ore:craftingWireCopper>.remove(<IC2:itemCable>);
 <ore:wireCopper>.remove(<IC2:itemCable>);
+<ore:listAllCoalOre>.add(<gregtech:gt.blockores:535>);
+<ore:listAllCoalOre>.add(<gregtech:gt.blockores:1535>);
+<ore:listAllCoalOre>.add(<gregtech:gt.blockores:2535>);
+<ore:listAllCoalOre>.add(<gregtech:gt.blockores:3535>);
+<ore:listAllCoalOre>.add(<gregtech:gt.blockores:4535>);
+<ore:listAllCoalOre>.add(<minecraft:coal_ore>);
+<ore:listAllChalcoOre>.add(<gregtech:gt.blockores:855>);
+<ore:listAllChalcoOre>.add(<gregtech:gt.blockores:1855>);
+<ore:listAllChalcoOre>.add(<gregtech:gt.blockores:2855>);
+<ore:listAllChalcoOre>.add(<gregtech:gt.blockores:3855>);
+<ore:listAllChalcoOre>.add(<gregtech:gt.blockores:4855>);
 
 # -- Fixing JABBA unification exploits --
 
@@ -588,3 +604,10 @@ recipes.addShapeless(GTDough, [anyWater, GTSalt, dustWheat]);
 //OutputStack, OutputFluid (optional), InputArray, FluidInput, Time in Ticks, EnergyUsage
 Mixer.addRecipe(GTDough * 2, null, [GTFlour, <InfinityCore:itemMaterial:16>], <liquid:water> * 1000, 31, 8);
 Mixer.addRecipe(GTDough * 2, null, [GTFlour, GTSalt], <liquid:water> * 1000, 31, 8);
+
+# Jetpack Buff
+recipes.remove(jetpack);
+recipes.addShaped(jetpack, [
+    [itemCasingIron, circuitBasic, itemCasingIron],
+    [itemCasingIron, cellLargeSteel, itemCasingIron],
+    [dustRedstone, null, dustRedstone]]);
