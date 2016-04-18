@@ -69,6 +69,9 @@ var moltenThorium	        = <liquid:molten.thorium>;
 var moltenTin               = <liquid:molten.tin>;	
 var moltenUranium238        = <liquid:molten.uranium>;	
 var moltenOsmium            = <liquid:molten.osmium>;
+var moltenSteel             = <liquid:molten.steel>;
+var chlorine                = <liquid:chlorine>;
+var titaniumtetrachloride   = <liquid:titaniumtetrachloride>;
 
 
 // Purified Ores
@@ -270,18 +273,21 @@ var crushedZinc             = <gregtech:gt.metaitem.01:5036>;
 # Multiplication (Chemical Reactor)
 //OutputStack, OutputFluid, InputStack1, InputStack2, InputFluid, Time in Ticks
 //ChemicalReactor.addRecipe(Purified * 4, Liquid Byproduct * 144, Comb * 9, Crushed, <liquid:water> * 1000, 96);
-ChemicalReactor.addRecipe(null, moltenIron * 144, combSteel * 9, crushedMagnetite, water * 1000, 96);
-ChemicalReactor.addRecipe(null, moltenIron * 144, combSteel * 9, crushedMeteoricIron, water * 1000, 96);
-ChemicalReactor.addRecipe(null, moltenNickel * 144, combSteel * 9, crushedIron, water * 1000, 96);
-ChemicalReactor.addRecipe(null, moltenNickel * 144, combSteel * 9, crushedYLimonite, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedMagnetite * 4, moltenSteel * 144, combSteel * 9, crushedMagnetite, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedMeteoricIron * 4, moltenSteel * 144, combSteel * 9, crushedMeteoricIron, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedIron * 4, moltenSteel * 144, combSteel * 9, crushedIron, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedYLimonite * 4, moltenSteel * 144, combSteel * 9, crushedYLimonite, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedBLimonite * 4, moltenSteel * 144, combSteel * 9, crushedBLimonite, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedBandedIron * 4, moltenSteel * 144, combSteel * 9, crushedBandedIron, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedAlmandine * 4, null, combSapphire * 9, crushedAlmandine, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedAluminium * 4, null, combAluminium * 9, crushedAluminium, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedApatite * 4, null, combStone * 9, crushedApatite, water * 1000, 96);
-ChemicalReactor.addRecipe(purifiedBandedIron * 4, null, combIron * 9, crushedBandedIron, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedBandedIron * 4, moltenIron * 144, combIron * 9, crushedBandedIron, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedBarite * 4, null, combCertus * 9, crushedBarite, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedBastnasite * 4, moltenNeodymium * 144, combChrome * 9, crushedBastnasite, water * 1000, 96);
-ChemicalReactor.addRecipe(purifiedBauxite * 4, null, combGold * 9, crushedBauxite, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedBauxite * 4, null, combAluminium * 9, crushedBauxite, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedBauxite * 4, null, combTitanium * 9, crushedBauxite, water * 1000, 96);
+ChemicalReactor.addRecipe(purifiedBauxite * 4, titaniumtetrachloride * 1000, combTitanium * 9, crushedBauxite, chlorine * 2000, 96);
 ChemicalReactor.addRecipe(purifiedBentonite * 4, moltenAluminium * 144, combOlivine * 9, crushedBentonite, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedBeryllium * 4, null, combEmerald * 9, crushedBeryllium, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedBLimonite * 4, null, combIron * 9, crushedBLimonite, water * 1000, 96);
@@ -303,7 +309,6 @@ ChemicalReactor.addRecipe(purifiedGalena * 4, null, combSilver * 9, crushedGalen
 ChemicalReactor.addRecipe(purifiedGarnierite * 4, moltenNickel * 144, combNickel * 9, crushedGarnierite, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedGlauconite * 4, null, combOlivine * 9, crushedGlauconite, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedGold * 4, moltenCopper * 144, combGold * 9, crushedGold, water * 1000, 96);
-ChemicalReactor.addRecipe(purifiedGold * 4, moltenIron * 144, combGold * 9, crushedGold, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedGraphite * 4, moltenCarbon * 144, combDiamond * 9, crushedGraphite, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedGreenSapphire * 4, moltenAluminium * 144, combSapphire * 9, crushedGreenSapphire, water * 1000, 96);
 ChemicalReactor.addRecipe(purifiedGrossular * 4, null, combManganese * 9, crushedGrossular, water * 1000, 96);

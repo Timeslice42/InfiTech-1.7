@@ -21,6 +21,7 @@ gendustry.bees.species.Sapphire=Sapphire
 gendustry.bees.species.Diamond=Diamond
 gendustry.bees.species.Olivine=Olivine
 gendustry.bees.species.Emerald=Emerald
+gendustry.bees.species.Silicon=Silicon
 gendustry.bees.species.Copper=Copper
 gendustry.bees.species.Tin=Tin
 gendustry.bees.species.Lead=Lead
@@ -39,6 +40,7 @@ gendustry.bees.species.Platinum=Platinum
 gendustry.bees.species.Iridium=Iridium
 gendustry.bees.species.Uranium=Uranium
 gendustry.bees.species.Plutonium=Plutonium
+gendustry.bees.species.Osmium=Osmium
 gendustry.bees.species.Naquadah=Naquadah
 gendustry.bees.species.DOB=D-O-B
 
@@ -84,6 +86,7 @@ gendustry.honeycomb.chrome.name=Chrome Comb
 gendustry.honeycomb.tungsten.name=Tungsten Comb
 gendustry.honeycomb.platinum.name=Platinum Comb
 gendustry.honeycomb.iridium.name=Iridium Comb
+gendustry.honeycomb.osmium.name=Osmium Comb
 
 gendustry.honeycomb.uranium.name=Uranium Comb
 gendustry.honeycomb.plutonium.name=Plutonium Comb
