@@ -104,3 +104,16 @@ mods/ic2/*
 mods/FullscreenWindowed*.jar
 mods/OptiFine*.jar
 mods/VersionChecker*.jar
+mods/1.7.10/[1.7.10]bspkrsCore-universal-*.jar
+config/supercraftingframe.cfg
+config/StatusEffectHUD.cfg
+config/SpiceOfLife/example-food-group.json
+config/SpiceOfLife.cfg
+config/soundfilters.cfg
+config/PneumaticCraft/AmadronOffersPeriodic.cfg
+config/PneumaticCraft/AmadronOffersStatic.cfg
+config/PneumaticCraft/AmadronTradingSettings.cfg
+config/PneumaticCraft/ProgrammingPuzzleBlacklist.cfg
+config/bspkrsCore.cfg
+config/ArmorStatusHUD.cfg
+config/AppliedEnergistics2/Facades.cfg
