@@ -6,22 +6,29 @@ import mods.thaumcraft.Aspects;
 Aspects.set(<minecraft:blaze_powder>, "ignis 2, praecantatio 1");
 Aspects.set(<Thaumcraft:WandCap>, "metallum 4");
 
-Aspects.set(<InfinityCore:itemCluster:15>, "metallum 2, ordo 1, terra 1, vitreus 1, aer 1");
-Aspects.set(<InfinityCore:itemCluster:9>, "metallum 5, ordo 1, terra 1, nebrisum 2");
-Aspects.set(<InfinityCore:itemCluster:7>, "metallum 5, ordo 1, terra 1, ignis 2");
-Aspects.set(<InfinityCore:itemCluster:2>, "metallum 5, ordo 1, terra 1, instrumentum 2");
-Aspects.set(<InfinityCore:itemCluster:11>, "metallum 5, ordo 1, terra 1, tutamen 2");
-Aspects.set(<InfinityCore:itemCluster:3>, "metallum 5, ordo 1, terra 1, machina 2");
-Aspects.set(<InfinityCore:itemCluster:5>, "metallum 5, ordo 1, terra 1, radio 2, nebrisum 2");
-Aspects.set(<InfinityCore:itemCluster:14>, "metallum 5, ordo 1, terra 1, sano 2");
 Aspects.set(<InfinityCore:itemCluster:0>, "metallum 5, ordo 1, terra 1, volatus 2");
-Aspects.set(<InfinityCore:itemCluster:12>, "metallum 5, ordo 1, terra 1, radio 4");
-Aspects.set(<InfinityCore:itemCluster:13>, "metallum 4, ordo 1, terra 1, potentia 4, venenum 4");
 Aspects.set(<InfinityCore:itemCluster:1>, "metallum 5, ordo 1, terra 1, lucrum 2");
-Aspects.set(<InfinityCore:itemCluster:10>, "metallum 5, ordo 1, terra 1, radio 2");
-Aspects.set(<InfinityCore:itemCluster:8>, "metallum 7, ordo 1, terra 1");
+Aspects.set(<InfinityCore:itemCluster:2>, "metallum 5, ordo 1, terra 1, instrumentum 2");
+Aspects.set(<InfinityCore:itemCluster:3>, "metallum 5, ordo 1, terra 1, machina 2");
 Aspects.set(<InfinityCore:itemCluster:4>, "metallum 5, ordo 1, terra 1, instrumentum 2");
+Aspects.set(<InfinityCore:itemCluster:5>, "metallum 5, ordo 1, terra 1, radio 2, nebrisum 2");
 Aspects.set(<InfinityCore:itemCluster:6>, "metallum 5, ordo 1, terra 1, magneto 4");
+Aspects.set(<InfinityCore:itemCluster:7>, "metallum 5, ordo 1, terra 1, ignis 2");
+Aspects.set(<InfinityCore:itemCluster:8>, "metallum 7, ordo 1, terra 1");
+Aspects.set(<InfinityCore:itemCluster:9>, "metallum 5, ordo 1, terra 1, nebrisum 2");
+Aspects.set(<InfinityCore:itemCluster:10>, "metallum 5, ordo 1, terra 1, radio 2");
+Aspects.set(<InfinityCore:itemCluster:11>, "metallum 5, ordo 1, terra 1, tutamen 2");
+Aspects.set(<InfinityCore:itemCluster:12>, "metallum 5, ordo 1, terra 1, radio 4");
+Aspects.set(<InfinityCore:itemCluster:13>, "metallum 3, ordo 1, terra 1, potentia 4, venenum 4");
+Aspects.set(<InfinityCore:itemCluster:14>, "metallum 5, ordo 1, terra 1, sano 2");
+Aspects.set(<InfinityCore:itemCluster:15>, "metallum 2, ordo 1, terra 1, vitreus 1, aer 1");
+Aspects.set(<InfinityCore:itemCluster:17>, "metallum 1, ordo 1, terra 1, potentia 4, vitreus 2");
+Aspects.set(<InfinityCore:itemCluster:18>, "metallum 7, ordo 1, terra 1");
+Aspects.set(<InfinityCore:itemCluster:19>, "metallum 5, ordo 1, terra 1, aqua 2");
+Aspects.set(<InfinityCore:itemCluster:20>, "metallum 6, ordo 1, terra 1, alienis 4");
+Aspects.set(<InfinityCore:itemCluster:21>, "metallum 1, ordo 1, terra 1");
+Aspects.set(<InfinityCore:itemCluster:22>, "metallum 1, ordo 1, terra 1");
+
 
 // Harvestcraft
 Aspects.remove(<minecraft:milk_bucket>, "metallum 8");
@@ -73,7 +80,7 @@ Aspects.set(<chisel:glass2:*>, "vitreus 1");
 Aspects.set(<chisel:glowstone:*>, "lux 10, sensus 3");
 Aspects.set(<chisel:gold2:*>, "metallum 20, lucrum 13");
 Aspects.set(<chisel:gold_block:*>, "metallum 20, lucrum 13");
-Aspects.set(<chisel:granite:*>, "terra 1, ordo 1");
+Aspects.set(<chisel:granite:*>, "terra 1, tutamen 1");
 Aspects.set(<chisel:grimstone:*>, "terra 1, tenebrae 1");
 Aspects.set(<chisel:hexLargePlating:*>, "terra 1, potentia 2");
 Aspects.set(<chisel:hexPlating:*>, "terra 1, potentia 2");
@@ -107,7 +114,7 @@ Aspects.set(<chisel:jackolantern13:*>, "messis 1, lux 1");
 Aspects.set(<chisel:jackolantern14:*>, "messis 1, lux 1");
 Aspects.set(<chisel:jackolantern15:*>, "messis 1, lux 1");
 Aspects.set(<chisel:jackolantern16:*>, "messis 1, lux 1");
-Aspects.set(<chisel:jungle_planks:*>, "messis 1, lux 1");
+Aspects.set(<chisel:jungle_planks:*>, "arbor 1");
 Aspects.set(<chisel:laboratoryblock:*>, "terra 1, ordo 1");
 Aspects.set(<chisel:lapis_block:*>, "sensus 6");
 Aspects.set(<chisel:lavastone:*>, "terra 1, ignis 1");
@@ -260,7 +267,7 @@ for i, id in wireIDs {
 }
 
 Aspects.set(<gregtech:gt.blockconcretes:*>, "terra 1, motus 1");
-Aspects.set(<gregtech:gt.blockgranites:*>, "terra 1, ordo 1");
+Aspects.set(<gregtech:gt.blockgranites:*>, "terra 1, tutamen 1");
 Aspects.set(<IC2:itemPartCircuit>, "machina 3, electrum 3");
 Aspects.set(<gregtech:gt.integrated_circuit>, "machina 3, electrum 3");
 Aspects.set(<gregtech:gt.metaitem.01:32700>, "machina 2, electrum 2");
@@ -312,6 +319,51 @@ Aspects.set(<BuildCraft|Transport:item.buildcraftPipe.pipepowersandstone:*>, "mo
 Aspects.set(<BuildCraft|Transport:item.buildcraftPipe.pipestructurecobblestone:*>, "terra 1");
 
 // Extrabiomes
-Aspects.set(<ExtrabiomesXL:flower1:*>, "victus 1, sensus 1");
-Aspects.set(<ExtrabiomesXL:flower2:*>, "victus 1, sensus 1");
-Aspects.set(<ExtrabiomesXL:flower3:*>, "victus 1, sensus 1");
+Aspects.set(<ExtrabiomesXL:flower1:*>, "herba 1, victus 1, sensus 1");
+Aspects.set(<ExtrabiomesXL:flower2:*>, "herba 1, victus 1, sensus 1");
+Aspects.set(<ExtrabiomesXL:flower3:*>, "herba 1, victus 1, sensus 1");
+
+// Ztones
+Aspects.set(<Ztones:stoneTile>, "terra 1");
+Aspects.set(<Ztones:lampf>, "metallum 2, lux 2");
+Aspects.set(<Ztones:lampb>, "metallum 2, lux 2");
+Aspects.set(<Ztones:lampt>, "metallum 2, lux 2");
+Aspects.set(<Ztones:cleanDirt>, "terra 2, aqua 1, herba 1");
+Aspects.set(<Ztones:minicoal>, "ignis 1");
+Aspects.set(<Ztones:minicharcoal>, "ignis 1");
+Aspects.set(<Ztones:hunger>, "fames 4, corpus 1");
+Aspects.set(<Ztones:auroraBlock>, "sensus 1");
+Aspects.set(<Ztones:tile.korpBlock:*>, "terra 2");
+Aspects.set(<Ztones:tile.zechBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.tankBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.syncBlock:*>, "terra 1, vitreus 1");
+Aspects.set(<Ztones:tile.zkulBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.mintBlock:*>, "terra 1, limus 1");
+Aspects.set(<Ztones:tile.lairBlock:*>, "terra 1, ignis 1");
+Aspects.set(<Ztones:tile.solsBlock:*>, "terra 1, ignis 1");
+Aspects.set(<Ztones:tile.redsBlock:*>, "terra 1, machina 1");
+Aspects.set(<Ztones:tile.crayBlock:*>, "terra 2, ignis 1");
+Aspects.set(<Ztones:tile.fortBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.venaBlock:*>, "terra 1, iter 1");
+Aspects.set(<Ztones:tile.krypBlock:*>, "terra 2");
+Aspects.set(<Ztones:tile.zionBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.zomeBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.zaneBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.azurBlock:*>, "terra 1, sensus 1");
+Aspects.set(<Ztones:tile.zorgBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.bittBlock:*>, "terra 1, pannus 1");
+Aspects.set(<Ztones:tile.glaxx:*>, "vitreus 1");
+Aspects.set(<Ztones:tile.agonBlock:*>, "terra 1, sensus 1");
+Aspects.set(<Ztones:tile.zoneBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.zoeaBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.jeltBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.zetaBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.reedBlock:*>, "terra 1, aqua 1");
+Aspects.set(<Ztones:tile.ztylBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.iszmBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.roenBlock:*>, "terra 2");
+Aspects.set(<Ztones:tile.vectBlock:*>, "terra 1, spiritus 1");
+Aspects.set(<Ztones:tile.laveBlock:*>, "terra 1, gelum 1");
+Aspects.set(<Ztones:tile.zestBlock:*>, "terra 1, metallum 1");
+Aspects.set(<Ztones:tile.mystBlock:*>, "terra 2, herba 2");
+Aspects.set(<Ztones:tile.zythBlock:*>, "terra 1, metallum 1");

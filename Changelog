@@ -1,13 +1,174 @@
+v3.2.9
+
+Quests:
+- Fixed reward for Brown Limonite Quest
+- Fixed Battery Shop not repeatable and wrong cost
+- Added extra information for Magical Steel quest
+- Updated information in Tungstensteel Boiler quest
+- Soft reset the link for Analyzing Crops quest (It might have reset the quest for you, so yay to do it again)
+- More items in shop locked behind Avengers Assemble and not the Packing Up. (Iron, Copper, Tin and Battery are still available as they were before)
+- Added info about tank layout and output side for the "Better Steam Storage" quest.
+- Concealed "Higher Tier Tools" quest
+
+New Mods:
+- Ewy's Workshop (replacement for Steves Workshop)
+
+Removed Mods:
+- Steves Workshop
+
+Mod Updates:
+- AppleCore -> 1.3.2
+- LogisticsPipes -> 0.9.3.124
+
+Mod Downgrade>
+- EnderIO -> 2.3.0.425
+
+Changes/Fixes:
+- Removed empty script files (Just in case I recommend deleting manually your scripts folder before the update)
+- Swapped Polyethylene to Polyprolactam in reinforced thread crafting recipe
+- Removed Damascus Steel recipe buff
+- Fixed KAMI vis costs
+- Fixed Clusters needing wrong ores (Lithium, Manganese, Antimony)
+- Fixed Lithium Clusters giving lithium
+- Fixed Galacticraft wrench recipe, not consuming the wrench.
+- GC Wrench now can be crafted only using Steel Wrench (any durability)
+- Hiden runic armour/infusion enchantement requirements
+- Disabled KAMI shards in magic generator
+- Moved Universal Cluster research near to KAMI researches
+- Removed clusters from IBF to hide the recipe from NEIAddons
+- Conceal unconcealed custom researches
+- QDS can now be crafted with any wooden plank, not only vanilla
+- Stone slabs are now crafted in same way as wooden ones (saw)
+- Renamed Travellers Gear Cloak to Simple Cloak (To stop confusing some players. Simple Cloak is the one used for Wolven Cloak or Voluminous Pockets)
+- Fixed EnderIO farm not working
+
+
+v3.2.8
+
+Quests:
+- New quest about getting higher tier material - Bronze Age
+- New quest to obtain Cropnalyzer early. - Bronze Age
+- New shop item - Single-Use Acid Batteries
+- "Manufactured Diamonds" - Lowered required amount of iDiamonds, raised optional reward
+- "Electrical Tools" - Fixed quest not recognizing charged tools.
+- Added Soldering Iron Quest
+
+Mod Updates:
+- BiblioCraft -> 1.11.5
+- EnderCore -> 0.2.0.35
+- EnderIO -> 2.3.0.426
+- IC2 Nuclear Control -> 2.4.0a
+- InfinityCore -> 1.6b
+- Jabba -> 1.2.2
+- Railcraft Cosmetics -> 1.7.2
+- WCT -> 1.8.6.2b
+- IndustrialCraft 2 -> 2.2.822
+- LogisticsPipes -> 0.9.3.122
+
+Enabled Hardcore Wither mod by default
+
+Changes/Fixes:
+- Fixed Railcraft Lead Plate name
+- Removed its crafting recipe since its not used
+- Removed Rebar crafting table recipe
+- OpenComputers Manual no longer given to new players (since players can't start with OC before HV). Still craftable
+- Added microblocks to few GT blocks
+- Disabled Translocator Crafting Grid (dupe exploit)
+- Raised energy usage of Telepad by 0.85x allowing it to be charged with HV and speeding the teleport process by 0.85x
+- Disabled Slotted Book from Bibliocraft (dupe exploit)
+- Fixed Electrical Tools dissapearing when running out of energy instead of just not being usable.
+- Expanded Thaumcraft Native Cluster Support (couple new clusters)
+- Enabled KAMI with "this-is-fucking-insane-hard" recipes
+
+v3.2.7
+
+New Mods:
+- Hardcore Wither - Disabled per default; for testing.
+- Chisel Tones
+
+Mod Updates:
+- EnderIO -> 2.3.0.425
+- InfinityCore -> 1.6a
+- Railcraft -> 9.12.2.0
+- Wireless Crafting Terminal -> 1.8.3b
+- StorageDrawers -> 1.9.8
+- Framez 2 -> 0.1.2
+
+Changes/Fixes:
+- DOB Bees now require catalyst also for breeding inside Mutatron
+- Fixed Certus and Platinum bee Flower blocks
+- Fixed Fishing Core infusion
+- Added aspects to Ztones blocks
+- Upgraded TC Farmland recipes to garden soil (from Ztones)
+- GUIDE BOOKS: Removed Maintenance problems table -> Replaced by text version
+- GUIDE BOOKS: Moved BBF Example recipes to another page
+- Re-enabled Ztones Ofanix - with changed recipe
+- Re-enabled Ztones Splat Axe - No crafting recipe, rare loot
+- Halved tungstate cluster output in Blast Furnace/Pulverizer
+- Travel Anchor can't be used as unpowered elevator now. You MUST have Staff of Travelling
+- Disabled Metamorphic Stone wordgen
+- Metamorphic Stone cannot be silk touched anymore. Always gives Cracked version, which needs to be "fixed"
+
+v3.2.6
+
+Forge updated: 1614
+
+Quests:
+- "Silicon Age" - "Industrialist TNT" - Enhanced the tasks
+
+New Mods:
+- Wireless Crafting AE2 Terminal
+
+Mod Updates:
+- AppleCore -> 1.3.1
+- Galacticraft -> 3.0.12.460
+- InfinityCore -> 1.6
+- Railcraft -> 9.11.0.0
+- LogisticPipes -> 0.9.3.121
+- Wawla -> 1.3.3
+
+Changes/Fixes:
+- Fixed few aspect errors
+- Enhanced Compatibility with IC2 (Pu, U)
+- Sped up world loading time
+- Changed eIO Enchanter recipe for Haste enchant
+- Fixed EV Battery Charger (Workaround until GT.22)
+- Lowered Volcano Spawnrate
+- Added button for server download
+- Added conversion recipe for GT Ores -> Vanilla (because of XU stabilization ritual)
+- Enabled Last Millennium Dimension (default recipe, moved to QED)
+- Fixed Extruder crafting recipe for PneumaticCraft Tubes (no longer consumes the Shape)
+- Activated DOB bee
+- Fixed Diamond Nugget unification
+
+v3.2.5.1
+
+Changes/Fixes
+- Fixed Dimensional Transceiver not being craftable
+
 v3.2.5
 
 Quests:
 - Fixed typo in Oil Quests about amount of fluid needed to complete
 - Added 2 extra quests about explaining QDS
+- "Magic": "Clustered" - Removed U235 cluster from the 4th task
+
+New Mods:
+- Ztones
 
 Mod Updates:
 - EnderCore -> 0.2.0.33
 - Industrial Craft 2 -> 2.2.821
 - Thaumic Energistics -> 1.0.0.5
+- InfinityCore -> 1.5
+- SGCraft -> 1.11.2
+- AppliedEnergistics 2 -> rv3-beta-6
+- Buildcraft Compat -> 7.1.5
+- Forestry -> 4.2.12.60
+- JourneyMap -> 5.1.4p1
+- Magic Bees -> Customized
+- Pam's Harvestcraft -> Customized
+- ProjectRed -> Customized
 
 Changes/Fixes
 - Changed Oblivion Essence crafting recipe
@@ -30,6 +191,16 @@ Changes/Fixes
 - Added aspects for a ton of stuff
 - Changed Oil Comb processing
 - Plutonium and Uranium from IC2 are now oredicted with GT relevant versions.
+- Removed PHC presser recipe for making Logs -> Paper
+- Fixed GT Tools vanishing in PrRed tables
+- IC2 Fertilizer compatible with FT
+- Fixed crash with fluid modules/pipes from Logistics Pipes
+- Fixed crash with "most likely" button in Logistics Pipes
+- Lowered EU/t gained from Dragon Eggs and Vis
+- Fixed jetpack recipes
+- Disabled StorageDrawers item conversion to prevent oreDict exploits
+- Renamed Stargate Controller to DHD
+- Changed Tin Can recipe
 - Added April patrons
 
 v3.2.4.1 Patch

@@ -241,6 +241,7 @@ import mods.gregtech.AlloySmelter;
 import mods.gregtech.Slicer;
 import mods.gregtech.ChemicalBath;
 import mods.witchinggadgets.InfernalBlastfurnace;
+import minetweaker.game.IGame;
 
 print("Initializing Thaumcraft Changes");
 
@@ -600,7 +601,7 @@ game.setLocalization("en_US", "tc.research_text.GT_TRANSSTEELDAMASCUS", "[GT] Re
 Research.addPage("GT_TRANSSTEELDAMASCUS", "kirara.research_page.GT_TRANSSTEELDAMASCUS.1");
 game.setLocalization("en_US", "kirara.research_page.GT_TRANSSTEELDAMASCUS.1", "You have discovered a way of making steel even harder by breaking down and crystallizing its components on an atomic level.<BR>This method can be used to refine an amazingly durable variant of steel resembling that of the legendary Damascus Steel normally only found in ancient ruins. Unfortunately, this process leaves the material in dust form, requiring further processing via non-Thaumaturgical means.");
 Research.addPrereq("GT_TRANSSTEELDAMASCUS", "GT_IRON_TO_STEEL", false);
-Crucible.addRecipe("GT_TRANSSTEELDAMASCUS", <gregtech:gt.metaitem.01:9335>, <ore:nuggetSteel>, "ordo 1, machina 1");
+Crucible.addRecipe("GT_TRANSSTEELDAMASCUS", <gregtech:gt.metaitem.01:9335>, <ore:nuggetSteel>, "vitreus 1, ordo 1, machina 1");
 Research.addCruciblePage("GT_TRANSSTEELDAMASCUS", <gregtech:gt.metaitem.01:9335>);
 Research.setConcealed("GT_TRANSSTEELDAMASCUS", true);
 
@@ -846,7 +847,7 @@ Research.addArcanePage("thaumicenergistics.TEFOCUSWRENCH", <thaumicenergistics:f
 
 // Crafting Focus
 Arcane.removeRecipe(<Automagy:focusCrafting>);
-Arcane.addShaped("FOCUSCRAFTING", <Automagy:focusCrafting>, "ordo 30, terra 10, perditio 5", [[<ore:craftingTableWood>, <ore:ringBeryllium>, <Thaumcraft:blockTable:15>], [<ore:ringBeryllium>, <ore:lensOlivine>, <ore:ringBeryllium>], [<StevesWorkshop:production_table>, <ore:ringBeryllium>, <BiblioCraft:BiblioWorkbench>]]);
+Arcane.addShaped("FOCUSCRAFTING", <Automagy:focusCrafting>, "ordo 30, terra 10, perditio 5", [[<ore:craftingTableWood>, <ore:ringBeryllium>, <Thaumcraft:blockTable:15>], [<ore:ringBeryllium>, <ore:lensOlivine>, <ore:ringBeryllium>], [<ewysworkshop:WorkshopTable>, <ore:ringBeryllium>, <BiblioCraft:BiblioWorkbench>]]);
 Research.refreshResearchRecipe("FOCUSCRAFTING");
 
 print('Foci reconfigured');
@@ -870,6 +871,8 @@ game.setLocalization("en_US", "potion.potency.7", "VIII");
 game.setLocalization("en_US", "potion.potency.8", "IX");
 game.setLocalization("en_US", "potion.potency.9", "X");
 game.setLocalization("en_US", "tile.extrautils:pureLove.name", "Pure Love");
+game.setLocalization("item.TravellersGear.simpleGear.cloak.name","Simple Cloak");
+
 
 //*************************
 // Adding Warp to Research
@@ -1196,7 +1199,10 @@ Infusion.addRecipe("COREALCHEMY", <Thaumcraft:ItemGolemCore:5>, [<Thaumcraft:blo
 Infusion.addRecipe("CORELUMBER", <Thaumcraft:ItemGolemCore:3>, [<Thaumcraft:ItemAxeElemental>, <gregtech:gt.metaitem.02:3335>, <gregtech:gt.metaitem.01:32652>, <gregtech:gt.metaitem.02:3339>], "arbor 16, instrumentum 16, meto 32, electrum 8", <Thaumcraft:ItemGolemCore:7>, 5);
 Infusion.addRecipe("COREUSE", <Thaumcraft:ItemGolemCore:1>, [<ExtraUtilities:glove>, <OpenComputers:item:42>, <gregtech:gt.metaitem.01:32652>, <WitchingGadgets:item.WG_ThaumiumShears>], "machina 16, instrumentum 16, humanus 32, electrum 8", <Thaumcraft:ItemGolemCore:8>, 5);
 Infusion.addRecipe("CORESORTING", <Thaumcraft:ItemGolemCore:1>, [<Thaumcraft:ItemZombieBrain>, <minecraft:writable_book>, <gregtech:gt.metaitem.01:32651>, <gregtech:gt.metaitem.01:32729>], "cognitio 16, vacuos 16, permutatio 32, electrum 8", <Thaumcraft:ItemGolemCore:10>, 5);
-Infusion.addRecipe("COREFISHING", <Thaumcraft:ItemGolemCore:3>, [<minecraft:fishing_rod>, <harvestcraft:calamarirawItem>, <gregtech:gt.metaitem.01:30711>, <gregtech:gt.metaitem.01:32602>, <minecraft:fish:*>, <Thaumcraft:ItemNuggetFish>], "aqua 16, bestia 16, meto 32, electrum 8", <Thaumcraft:ItemGolemCore:11>, 5);
+Infusion.addRecipe("COREFISHING", <Thaumcraft:ItemGolemCore:3>, [<minecraft:fishing_rod>, <harvestcraft:calamarirawItem>, <gregtech:gt.metaitem.01:30711>, <gregtech:gt.metaitem.01:32602>, <minecraft:fish>, <Thaumcraft:ItemNuggetFish>], "aqua 16, bestia 16, meto 32, electrum 8", <Thaumcraft:ItemGolemCore:11>, 5);
+Infusion.addRecipe("COREFISHING", <Thaumcraft:ItemGolemCore:3>, [<minecraft:fishing_rod>, <harvestcraft:calamarirawItem>, <gregtech:gt.metaitem.01:30711>, <gregtech:gt.metaitem.01:32602>, <minecraft:fish:1>, <Thaumcraft:ItemNuggetFish>], "aqua 16, bestia 16, meto 32, electrum 8", <Thaumcraft:ItemGolemCore:11>, 5);
+Infusion.addRecipe("COREFISHING", <Thaumcraft:ItemGolemCore:3>, [<minecraft:fishing_rod>, <harvestcraft:calamarirawItem>, <gregtech:gt.metaitem.01:30711>, <gregtech:gt.metaitem.01:32602>, <minecraft:fish:2>, <Thaumcraft:ItemNuggetFish>], "aqua 16, bestia 16, meto 32, electrum 8", <Thaumcraft:ItemGolemCore:11>, 5);
+Infusion.addRecipe("COREFISHING", <Thaumcraft:ItemGolemCore:3>, [<minecraft:fishing_rod>, <harvestcraft:calamarirawItem>, <gregtech:gt.metaitem.01:30711>, <gregtech:gt.metaitem.01:32602>, <minecraft:fish:3>, <Thaumcraft:ItemNuggetFish>], "aqua 16, bestia 16, meto 32, electrum 8", <Thaumcraft:ItemGolemCore:11>, 5);
 
 // Golem Upgrade Recipes
 Arcane.removeRecipe(<Thaumcraft:ItemGolemUpgrade:0>);
@@ -1352,8 +1358,8 @@ Arcane.addShaped("ESSENTIACRYSTAL", <Thaumcraft:blockTube:7>, "terra 15, aqua 5,
 
 print('Alchemical Greggery');
 
-// Copper Wand Cap
-recipes.addShaped(<Thaumcraft:WandCap:3>, [[null, <ore:roundCopper>, null], [<Thaumcraft:ItemThaumonomicon>.reuse(), <ore:ringCopper>, <ore:craftingToolHardHammer>]]);
+// Copper Wand Cap ( RECIPE NOW IN INFINITY CORE - FIX CONSUMPTION OF THAUMONOMICON )
+//recipes.addShaped(<Thaumcraft:WandCap:3>, [[null, <ore:roundCopper>, null], [<Thaumcraft:ItemThaumonomicon>.reuse(), <ore:ringCopper>, <ore:craftingToolHardHammer>]]);
 
 // Wood + Copper Wand
 recipes.addShaped(<gregtech:gt.metaitem.01:2809>, [[<ore:craftingToolMortar>, <ore:logWood>, <ore:craftingToolKnife>]]);
@@ -1645,6 +1651,7 @@ Infusion.addRecipe("GT_BREWREGEN", <minecraft:potion:8225>, [salisMundus, <minec
 Research.addInfusionPage("GT_BREWREGEN", potionRegeneration3);
 Infusion.addRecipe("GT_BREWREGEN", potionRegeneration3, [salisMundus, <minecraft:glowstone_dust>, <minecraft:ghast_tear>], "auram 8, sano 16, praecantatio 16", potionRegeneration4, 5);
 Research.addInfusionPage("GT_BREWREGEN", potionRegeneration4);
+Research.setConcealed("GT_BREWREGEN", true);
 
 // Absorption
 Research.addResearch("GT_BREWABSORPTION", "ALCHEMY", "permutatio 4, auram 2, volatus 2", 1, -7, 2, <minecraft:potion:8195>);
@@ -1663,6 +1670,7 @@ Infusion.addRecipe("GT_BREWABSORPTION", potionAbsorption3, [salisMundus, <minecr
 Research.addInfusionPage("GT_BREWABSORPTION", potionAbsorption4);
 Infusion.addRecipe("GT_BREWABSORPTION", potionAbsorption4, [salisMundus, <minecraft:golden_apple>, <minecraft:glowstone_dust>, <minecraft:redstone>], "auram 10, praecantatio 10, tutamen 10", potionAbsorption5, 6);
 Research.addInfusionPage("GT_BREWABSORPTION", potionAbsorption5);
+Research.setConcealed("GT_BREWABSORPTION", true);
 
 // Haste
 Research.addResearch("GT_BREWHASTE", "ALCHEMY", "permutatio 4, auram 2, perfodio 2", 2, -6, 2, <minecraft:potion:8228>);
@@ -1679,6 +1687,7 @@ Infusion.addRecipe("GT_BREWHASTE", potionHaste2, [salisMundus, <minecraft:glowst
 Research.addInfusionPage("GT_BREWHASTE", potionHaste3);
 Infusion.addRecipe("GT_BREWHASTE", potionHaste3, [salisMundus, <minecraft:glowstone_dust>, <minecraft:redstone>], "auram 8, praecantatio 16, perfodio 16", potionHaste4, 5);
 Research.addInfusionPage("GT_BREWHASTE", potionHaste4);
+Research.setConcealed("GT_BREWHASTE", true);
 
 // Jump
 Research.addResearch("GT_BREWJUMP", "ALCHEMY", "permutatio 4, auram 2, volatus 2", 3, -5, 2, <minecraft:potion:8232>);
@@ -1695,6 +1704,7 @@ Infusion.addRecipe("GT_BREWJUMP", potionJump2, [salisMundus, <minecraft:glowston
 Research.addInfusionPage("GT_BREWJUMP", potionJump3);
 Infusion.addRecipe("GT_BREWJUMP", potionJump3, [salisMundus, <minecraft:glowstone_dust>, <minecraft:redstone>], "auram 4, praecantatio 8, volatus 8", potionJump4, 5);
 Research.addInfusionPage("GT_BREWJUMP", potionJump4);
+Research.setConcealed("GT_BREWJUMP", true);
 
 // Travel
 // Research.addResearch("GT_BREWTRAVEL", "ALCHEMY", "permutatio 4, auram 2, volatus 2", 3, -5, 2, <minecraft:potion:8258>);
@@ -1733,6 +1743,7 @@ game.setLocalization("en_US", "kirara.research_page.PURELOVE.1", "Constantly pla
 Infusion.addRecipe("PURELOVE", <ExtraUtilities:decorativeBlock2:8>, [<Thaumcraft:blockMetalDevice:13>, <ThaumicTinkerer:mobAspect:29>, <Forestry:cratedWheat>, <Thaumcraft:blockMetalDevice:13>, <ThaumicTinkerer:mobAspect:29>, <Forestry:cratedSeeds>, <Thaumcraft:blockMetalDevice:13>, <ThaumicTinkerer:mobAspect:29>, <Forestry:cratedApples>, <Thaumcraft:blockMetalDevice:13>, <ThaumicTinkerer:mobAspect:29>, <Forestry:cratedCarrots>], "victus 256, bestia 64, tempus 32", <ExtraUtilities:pureLove>, 8);
 Research.addInfusionPage("PURELOVE", <ExtraUtilities:pureLove>);
 Research.addPrereq("PURELOVE", "LAMPFERTILITY", false);
+Research.setConcealed("PURELOVE", true);
 
 // Mundane Accessories
 Research.addResearch("GT_APPRENTICE_ARTIFICING", "ARTIFICE", "praecantatio 3, instrumentum 3", 3, 4, 2, <Thaumcraft:ItemBaubleBlanks:1>);
@@ -1878,10 +1889,11 @@ Research.addResearch("GT_FARMLAND", "ALCHEMY", "messis 2, aqua 2, ordo 2", 4, 1,
 game.setLocalization("en_US", "tc.research_name.GT_FARMLAND", "Preparing Farmland");
 game.setLocalization("en_US", "tc.research_text.GT_FARMLAND", "[GT] Pre-tilled, hydrated dirt");
 Research.addPage("GT_FARMLAND", "kirara.research_page.GT_FARMLAND.1");
-game.setLocalization("en_US", "kirara.research_page.GT_FARMLAND.1", "You have discovered a way of infusing dirt with aqua essentia to create a patch of damp, hydrated farmland that can immediately be used to plant crops without tilling.<BR>Unfortunately, this farmland will still eventually dry out if there is no nearby water.");
+game.setLocalization("en_US", "kirara.research_page.GT_FARMLAND.1", "You have discovered a way of infusing dirt with aqua essentia to create a patch of damp, hydrated farmland that can immediately be used to plant crops without tilling.");
 Research.addPrereq("GT_FARMLAND", "GT_FILL_WATER_BUCKET", false);
-Crucible.addRecipe("GT_FARMLAND", <minecraft:farmland:7>, <minecraft:dirt>, "aqua 1");
-Research.addCruciblePage("GT_FARMLAND", <minecraft:farmland:7>);
+recipes.remove(<Ztones:cleanDirt>);
+Crucible.addRecipe("GT_FARMLAND", <Ztones:cleanDirt>, <minecraft:dirt>, "aqua 2");
+Research.addCruciblePage("GT_FARMLAND", <Ztones:cleanDirt>);
 Research.setConcealed("GT_FARMLAND", true);
 
 // Pyrotheum
@@ -2092,6 +2104,7 @@ Research.addCruciblePage("GT_INFUSED_POTIONS", <ThaumicTinkerer:infusedPotion:0>
 Research.addCruciblePage("GT_INFUSED_POTIONS", <ThaumicTinkerer:infusedPotion:1>);
 Research.addCruciblePage("GT_INFUSED_POTIONS", <ThaumicTinkerer:infusedPotion:2>);
 Research.addCruciblePage("GT_INFUSED_POTIONS", <ThaumicTinkerer:infusedPotion:3>);
+Research.setConcealed("GT_INFUSED_POTIONS", true);
 
 // Refresh Recipes
 Research.refreshResearchRecipe("PLANTS");
@@ -2181,9 +2194,15 @@ InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11096>);
 InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11052>);
 InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11048>);
 InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11067>);
+InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11006>);
+InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11031>);
+InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11058>);
+InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11770>);
+InfernalBlastfurnace.removeRecipe(<gregtech:gt.metaitem.01:11884>);
 InfernalBlastfurnace.removeRecipe(<IC2:itemIngot:3>);
 InfernalBlastfurnace.removeRecipe(<IC2:blockMetal:5>);
 InfernalBlastfurnace.removeRecipe(<GalacticraftMars:item.itemBasicAsteroids:5>);
 InfernalBlastfurnace.removeRecipe(<GalacticraftCore:item.basicItem:5>);
+InfernalBlastfurnace.removeRecipe(<BigReactors:BRIngot>);
 
 print("Finished Thaumcraft Changes");

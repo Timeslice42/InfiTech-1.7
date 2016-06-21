@@ -81,6 +81,7 @@ var electricJetpack         = <IC2:itemArmorJetpackElectric>;
 var electricWrench          = <IC2:itemToolWrenchElectric:*>;
 var energiumDust            = <IC2:itemDust2:2>;
 var energyCrystal           = <IC2:itemBatCrystal:*>;
+var enrichedMOX             = <IC2:itemUran>;
 var foilTin					= <gregtech:gt.metaitem.01:29057>;
 var foodSalt                = <ore:foodSalt>;
 var frequencyTrans          = <IC2:itemFreq>;
@@ -127,7 +128,7 @@ var itemIngotElectrotine    = <ProjRed|Core:projectred.core.part:55>;
 var itemIngotSilver         = <gregtech:gt.metaitem.01:11054>;
 var itemPlankWood           = <gregtech:gt.metaitem.01:17809>;
 var itemRingWood            = <gregtech:gt.metaitem.01:28809>;
-var jetpack                 = <IC2:itemArmorJetpack:27>;
+var jetpack                 = <IC2:itemArmorJetpack:*>;
 var machineCasingAdvanced   = <IC2:blockMachine:12>;
 var machineHullHV           = <gregtech:gt.blockmachines:13>;
 var miner                   = <IC2:blockMachine:7>;
@@ -462,20 +463,50 @@ recipes.addShaped(teleporter, [
     [circuitAdvanced, plateNaquadahAlloy, circuitAdvanced]]);
 
 # Electrical Tools Oredictionary Stuff
-<ore:craftingToolMiningDrill>.add(<gregtech:gt.metatool.01:101>);
-<ore:craftingToolMiningDrill>.add(<gregtech:gt.metatool.01:103>);
-<ore:craftingToolMiningDrill>.add(<gregtech:gt.metatool.01:105>);
-Saw.add(<gregtech:gt.metatool.01:111>);
-Saw.add(<gregtech:gt.metatool.01:113>);
-Saw.add(<gregtech:gt.metatool.01:115>);
-Saw.add(<gregtech:gt.metatool.01:141>);
-<ore:craftingToolWrench>.add(<gregtech:gt.metatool.01:121>);
-<ore:craftingToolWrench>.add(<gregtech:gt.metatool.01:123>);
-<ore:craftingToolWrench>.add(<gregtech:gt.metatool.01:125>);
-<ore:craftingToolScrewdriver>.add(<gregtech:gt.metatool.01:151>);
-<ore:craftingToolSolderingIron>.add(<gregtech:gt.metatool.01:161>);
+
+// Electrical Tools Special Oredict for quests
+<ore:craftingToolElectricSaw>.add(<gregtech:gt.metatool.01:110>);
+<ore:craftingToolElectricSaw>.add(<gregtech:gt.metatool.01:111>);
+<ore:craftingToolElectricSaw>.add(<gregtech:gt.metatool.01:112>);
+<ore:craftingToolElectricSaw>.add(<gregtech:gt.metatool.01:113>);
+<ore:craftingToolElectricSaw>.add(<gregtech:gt.metatool.01:114>);
+<ore:craftingToolElectricSaw>.add(<gregtech:gt.metatool.01:115>);
+
+<ore:craftingToolElectricWrench>.add(<gregtech:gt.metatool.01:120>);
+<ore:craftingToolElectricWrench>.add(<gregtech:gt.metatool.01:121>);
+<ore:craftingToolElectricWrench>.add(<gregtech:gt.metatool.01:122>);
+<ore:craftingToolElectricWrench>.add(<gregtech:gt.metatool.01:123>);
+<ore:craftingToolElectricWrench>.add(<gregtech:gt.metatool.01:124>);
+<ore:craftingToolElectricWrench>.add(<gregtech:gt.metatool.01:125>);
+
+<ore:craftingToolElectricBuzzsaw>.add(<gregtech:gt.metatool.01:140>);
+<ore:craftingToolElectricBuzzsaw>.add(<gregtech:gt.metatool.01:141>);
+
+<ore:craftingToolElectricScrewdriver>.add(<gregtech:gt.metatool.01:150>);
+<ore:craftingToolElectricScrewdriver>.add(<gregtech:gt.metatool.01:151>);
+
+<ore:craftingToolElectricMiningDrill>.add(<gregtech:gt.metatool.01:100>);
+<ore:craftingToolElectricMiningDrill>.add(<gregtech:gt.metatool.01:101>);
+<ore:craftingToolElectricMiningDrill>.add(<gregtech:gt.metatool.01:102>);
+<ore:craftingToolElectricMiningDrill>.add(<gregtech:gt.metatool.01:103>);
+<ore:craftingToolElectricMiningDrill>.add(<gregtech:gt.metatool.01:104>);
+<ore:craftingToolElectricMiningDrill>.add(<gregtech:gt.metatool.01:105>);
+
+<ore:craftingToolElectricSolderingIron>.add(<gregtech:gt.metatool.01:160>);
+<ore:craftingToolElectricSolderingIron>.add(<gregtech:gt.metatool.01:161>);
 
 # Recipe Fixes
+var wireAluminium16 = <ore:wireGt16Aluminium>;
+var chest = <minecraft:chest>;
+var machineHullEV = <gregtech:gt.blockmachines:14>;
+var batteryMaster = <ore:batteryMaster>;
+var circuitData = <ore:circuitData>;
+
+recipes.remove(batteryChargerEV); // Remove after fix in GT
+recipes.addShaped(batteryChargerEV, [
+    [wireAluminium16, chest, wireAluminium16],
+    [wireAluminium16, machineHullEV, wireAluminium16],
+    [batteryMaster, circuitData, batteryMaster]]);
 recipes.remove(OVScanner);
 recipes.addShaped(OVScanner, [
     [itemCasingGold, energyCrystal, itemCasingGold],
@@ -487,13 +518,23 @@ recipes.addShaped(itemDustTinySalt * 9, [
     [itemDustSalt, null]]);
 recipes.remove(RTGPellet);
 recipes.addShaped(RTGPellet, [
-    [plateDenseIron, ingotPlutonium244, plateDenseIron],
-    [plateDenseIron, ingotPlutonium244, plateDenseIron],
-    [plateDenseIron, ingotPlutonium244, plateDenseIron]]);
+    [plateDenseIron, <ore:listIngotPlutonium>, plateDenseIron],
+    [plateDenseIron, <ore:listIngotPlutonium>, plateDenseIron],
+    [plateDenseIron, <ore:listIngotPlutonium>, plateDenseIron]]);
 recipes.addShaped(RTGPellet, [
     [plateDenseIron, plateDenseIron, plateDenseIron],
-    [ingotPlutonium244, ingotPlutonium244, ingotPlutonium244],
+    [<ore:listIngotPlutonium>, <ore:listIngotPlutonium>, <ore:listIngotPlutonium>],
     [plateDenseIron, plateDenseIron, plateDenseIron]]);
+recipes.remove(MOX);
+recipes.addShaped(MOX, [
+    [<ore:listIngotUranium>, <ore:listIngotUranium>, <ore:listIngotUranium>],
+    [<ore:listIngotPlutonium>, <ore:listIngotPlutonium>, <ore:listIngotPlutonium>],
+    [<ore:listIngotUranium>, <ore:listIngotUranium>, <ore:listIngotUranium>]]);
+recipes.remove(enrichedMOX);
+recipes.addShaped(enrichedMOX, [
+    [<ore:listIngotUranium>, <ore:listIngotUranium>, <ore:listIngotUranium>],
+    [<ore:listNuggetUranium235>, <ore:listNuggetUranium235>, <ore:listNuggetUranium235>],
+    [<ore:listIngotUranium>, <ore:listIngotUranium>, <ore:listIngotUranium>]]);
 
 # GT Processing
 CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:29874> * 2], <ore:ingotPlastic>, <liquid:lubricant> * 5, 60, 8);
@@ -597,8 +638,12 @@ game.setLocalization("ic2.fluidBiomass", "Industrial Biomass");
 <ore:listAllChalcoOre>.add(<gregtech:gt.blockores:2855>);
 <ore:listAllChalcoOre>.add(<gregtech:gt.blockores:3855>);
 <ore:listAllChalcoOre>.add(<gregtech:gt.blockores:4855>);
-<ore:ingotUranium>.add(<IC2:itemUran238>);
-<ore:ingotPlutonium>.add(<IC2:itemPlutonium>);
+<ore:listIngotPlutonium>.add(<IC2:itemPlutonium>);
+<ore:listIngotPlutonium>.add(<gregtech:gt.metaitem.01:11100>);
+<ore:listIngotUranium>.add(<IC2:itemUran238>);
+<ore:listIngotUranium>.add(<gregtech:gt.metaitem.01:11098>);
+<ore:listNuggetUranium235>.add(<IC2:itemUran235small>);
+<ore:listNuggetUranium235>.add(<gregtech:gt.metaitem.01:9097>);
 
 # -- Fixing JABBA unification exploits --
 
@@ -659,6 +704,10 @@ recipes.addShapeless(GTDough, [anyWater, GTSalt, dustWheat]);
 Mixer.addRecipe(GTDough * 2, null, [GTFlour, <InfinityCore:itemMaterial:16>], <liquid:water> * 1000, 31, 8);
 Mixer.addRecipe(GTDough * 2, null, [GTFlour, GTSalt], <liquid:water> * 1000, 31, 8);
 
+# PlantBalls
+Compressor.addRecipe(plantball, sapling * 4);
+Compressor.addRecipe(plantball, sugarcane * 8);
+
 # Food tin crafting (aka tin cans, aka food cans)
 FormingPress.addRecipe(tinnedSteel, foilTin * 2, itemCasingSteel, 20, 48);
 PlateBender.addRecipe(tinCan * 12, plateAluminium * 6, 552, 8);
@@ -666,7 +715,7 @@ PlateBender.addRecipe(tinCan, tinnedSteel, 100, 8);
 
 # Jetpack Buff
 recipes.remove(jetpack);
-recipes.addShaped(jetpack, [
+recipes.addShaped(<IC2:itemArmorJetpack:27>, [
     [itemCasingIron, circuitBasic, itemCasingIron],
     [itemCasingIron, cellLargeSteel, itemCasingIron],
     [dustRedstone, null, dustRedstone]]);

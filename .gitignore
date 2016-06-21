@@ -99,11 +99,13 @@ config/YAMPST.nbt
 config/fw.cfg
 mods/carpentersblocks/*
 mods/ic2/*
+servers.dat
 
 # Non essential/custom mods
 mods/FullscreenWindowed*.jar
 mods/OptiFine*.jar
 mods/VersionChecker*.jar
+mods/clearchat*.jar
 mods/1.7.10/[1.7.10]bspkrsCore-universal-*.jar
 config/supercraftingframe.cfg
 config/StatusEffectHUD.cfg
