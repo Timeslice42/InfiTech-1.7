@@ -1,7 +1,0 @@
-.\Headcrumbs-1.7.4.jar filter=lfs diff=lfs merge=lfs -text
-.\ExtraCells-1.7.10-2.3.9b189.jar filter=lfs diff=lfs merge=lfs -text
-.\supercraftingframe-1.7.10.3.jar filter=lfs diff=lfs merge=lfs -text
-.\`[1.7.10`]ArmorStatusHUD-client-1.28.jar filter=lfs diff=lfs merge=lfs -text
-.\`[1.7.10`]DamageIndicatorsMod-3.2.3.jar filter=lfs diff=lfs merge=lfs -text
-.\SoundFilters-0.8_for_1.7.X.jar filter=lfs diff=lfs merge=lfs -text
-.\DynamicSurroundings-1.7.10-1.0.5.6.jar filter=lfs diff=lfs merge=lfs -text
