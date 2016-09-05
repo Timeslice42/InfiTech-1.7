@@ -30,6 +30,7 @@ var MFSU                    = <IC2:blockElectric:2>;
 var MOX                     = <IC2:itemMOX>;
 var ODScanner               = <IC2:itemScanner:*>;
 var OVScanner               = <IC2:itemScannerAdv>;
+var RTGPellet               = <IC2:itemRTGPellet>;
 var Saw                     = <ore:craftingToolSaw>;
 var Screwdriver             = <ore:craftingToolScrewdriver>;
 var Wrench                  = <ore:craftingToolWrench>;
@@ -112,8 +113,8 @@ var ic2Scanner              = <IC2:blockMachine2:7>;
 var ic2SolidCanningMachine  = <IC2:blockMachine2:9>;
 var ic2ThermalCentrifuge    = <IC2:blockMachine2:3>;
 var ic2solarpanel           = <IC2:blockGenerator:3>;
-var ingotSteel              = <ore:ingotSteel>;
 var ingotPlutonium244       = <ore:ingotPlutonium>;
+var ingotSteel              = <ore:ingotSteel>;
 var iridiumDrill            = <IC2:itemToolIridiumDrill:*>;
 var itemCasingBronze        = <IC2:itemCasing:2>;
 var itemCasingGold          = <IC2:itemCasing:3>;
@@ -164,8 +165,6 @@ var rotorCarbon             = <IC2:itemwcarbonrotor>;
 var rotorIron               = <IC2:itemironrotor>;
 var rotorSteel              = <IC2:itemsteelrotor>;
 var rotorWood               = <IC2:itemwoodrotor>;
-var RTGPellet               = <IC2:itemRTGPellet>;
-var sapling                 = <minecraft:sapling:*>;
 var screwIridium            = <ore:screwIridium>;
 var screwIron               = <ore:screwIron>;
 var sensorHV                = <gregtech:gt.metaitem.01:32692>;
@@ -178,6 +177,7 @@ var teleporter              = <IC2:blockMachine2>;
 var tinCan					= <IC2:itemTinCan>;
 var tinnedSteel				= <InfinityCore:itemMaterial:18>;
 var uraniumEnriched         = <IC2:itemUran>;
+var weedingTrowel           = <IC2:itemWeedingTrowel>;
 
 # seeds
 
@@ -495,6 +495,7 @@ recipes.addShaped(teleporter, [
 <ore:craftingToolElectricSolderingIron>.add(<gregtech:gt.metatool.01:160>);
 <ore:craftingToolElectricSolderingIron>.add(<gregtech:gt.metatool.01:161>);
 
+<ore:craftingToolJackHammer>.add(<gregtech:gt.metatool.01:130>);
 <ore:craftingToolJackHammer>.add(<gregtech:gt.metatool.01:131>);
 
 # Recipe Fixes
@@ -541,12 +542,16 @@ recipes.addShaped(enrichedMOX, [
 # GT Processing
 CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:29874> * 2], <ore:ingotPlastic>, <liquid:lubricant> * 5, 60, 8);
 CuttingSaw.addRecipe([<gregtech:gt.metaitem.01:29874> * 2], <ore:platePlastic>, <liquid:lubricant> * 5, 60, 8);
-Compressor.addRecipe(plantball, sapling * 4);
-Compressor.addRecipe(plantball, sugarcane * 8);
 AlloySmelter.addRecipe(itemIngotBlueAlloy * 2, itemDustSilver, itemIngotElectrotine, 100, 16);
 AlloySmelter.addRecipe(itemIngotBlueAlloy * 2, itemIngotSilver, itemIngotElectrotine, 100, 16);
 
 # Recipe Tweaks
+recipes.remove(weedingTrowel);
+recipes.addShaped(weedingTrowel, [
+    [stickIron, null, stickIron],
+    [null, stickIron, null],
+    [plateRubber, stickIron, plateRubber]]);
+
 recipes.remove(singleUseBattery);
 recipes.addShaped(singleUseBattery * 6, [
     [cableTin1x],
@@ -707,7 +712,18 @@ Mixer.addRecipe(GTDough * 2, null, [GTFlour, <InfinityCore:itemMaterial:16>], <l
 Mixer.addRecipe(GTDough * 2, null, [GTFlour, GTSalt], <liquid:water> * 1000, 31, 8);
 
 # PlantBalls
-Compressor.addRecipe(plantball, sapling * 4);
+val saplings = [<minecraft:sapling:*>, <Forestry:saplingGE>, <Forestry:sapling>, <IC2:blockRubSapling>, <Thaumcraft:blockCustomPlant>, <Thaumcraft:blockCustomPlant:1>,
+    <harvestcraft:pamappleSapling>, <harvestcraft:pamalmondSapling>,     <harvestcraft:pamapricotSapling>,   <harvestcraft:pamavocadoSapling>,    <harvestcraft:pambananaSapling>,
+    <harvestcraft:pamcashewSapling>,<harvestcraft:pamcherrySapling>,     <harvestcraft:pamchestnutSapling>,  <harvestcraft:pamcinnamonSapling>,   <harvestcraft:pamcoconutSapling>, 
+    <harvestcraft:pamdateSapling>,  <harvestcraft:pamdragonfruitSapling>,<harvestcraft:pamdurianSapling>,    <harvestcraft:pamfigSapling>,        <harvestcraft:pamgrapefruitSapling>,
+    <harvestcraft:pamlemonSapling>, <harvestcraft:pamlimeSapling>,       <harvestcraft:pammapleSapling>,     <harvestcraft:pammangoSapling>,      <harvestcraft:pamnutmegSapling>,
+    <harvestcraft:pamoliveSapling>, <harvestcraft:pamorangeSapling>,     <harvestcraft:pampapayaSapling>,    <harvestcraft:pampaperbarkSapling>,  <harvestcraft:pampeachSapling>,
+    <harvestcraft:pampearSapling>,  <harvestcraft:pampecanSapling>,      <harvestcraft:pampeppercornSapling>,<harvestcraft:pampersimmonSapling>,  <harvestcraft:pampistachioSapling>,
+    <harvestcraft:pamplumSapling>,  <harvestcraft:pampomegranateSapling>,<harvestcraft:pamstarfruitSapling>, <harvestcraft:pamvanillabeanSapling>,<harvestcraft:pamwalnutSapling>,
+    <harvestcraft:pamgooseberrySapling>] as IIngredient[];
+for baum in saplings {
+    Compressor.addRecipe(plantball, baum * 4);
+}
 Compressor.addRecipe(plantball, sugarcane * 8);
 
 # Food tin crafting (aka tin cans, aka food cans)

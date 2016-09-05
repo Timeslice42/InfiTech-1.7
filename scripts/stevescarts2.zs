@@ -63,6 +63,7 @@ var HHammer             = <ore:craftingToolHardHammer>;
 var SHammer             = <ore:craftingToolSoftHammer>;
 var screwdriver         = <ore:craftingToolScrewdriver>;
 var file                = <ore:craftingToolFile>;
+var entityAnalyzer      = <StevesCarts:ModuleComponents:27>;
 
 //Blocks
 var cartassembler       = <StevesCarts:BlockCartAssembler>;
@@ -130,6 +131,7 @@ var liquidGlowstone     = <liquid:molten.glowstone>;
 var moltenBlueSteel     = <liquid:molten.bluesteel>;
 var strongSwiftnessBrew = <liquid:potion.speed.strong>;
 var foilPolycap         = <ore:foilPolycaprolactam>;
+var steelItemCasing     = <IC2:itemCasing:5>;
 
 //railcraft
 var standardrail        = <Railcraft:part.rail>;
@@ -187,7 +189,7 @@ var pearlEnder          = <ore:pearlEnder>;
 var lavabucket          = <ore:bucketLava>;
 var obsidian            = <minecraft:obsidian>;
 var glowstonedust       = <ore:dustGlowstone>;
-var teslatite           = <ore:dustTeslatite>;
+var dustElectrotine     = <ProjRed|Core:projectred.core.part:56>;
 var diamond             = <ore:gemDiamond>;
 var diamondblock        = <ore:blockDiamond>;
 var treesapling         = <ore:treeSapling>;
@@ -249,6 +251,12 @@ recipes.addShaped(minecart, [
     [gtwheelssteel, plateSteel, gtwheelssteel]]);
     
 # Recipe Tweaks
+
+recipes.remove(entityAnalyzer);
+recipes.addShaped(entityAnalyzer, [
+    [steelItemCasing, redstone, steelItemCasing],
+    [steelItemCasing, simplepcb, steelItemCasing],
+    [steelItemCasing, steelItemCasing, steelItemCasing]]);
 
 recipes.remove(wheelswood);
 recipes.addShaped(wheelswood, [
@@ -394,9 +402,9 @@ recipes.addShaped(advthermalengine, [
 
 recipes.remove(solarpanel);
 recipes.addShaped(solarpanel, [
-    [glowstonedust, teslatite, glowstonedust],
-    [teslatite, solarpanelULV, teslatite],
-    [glowstonedust, teslatite, glowstonedust]]);
+    [glowstonedust, dustElectrotine, glowstonedust],
+    [dustElectrotine, solarpanelULV, dustElectrotine],
+    [glowstonedust, dustElectrotine, glowstonedust]]);
 
 recipes.remove(advsolarpanel);
 recipes.addShaped(advsolarpanel, [

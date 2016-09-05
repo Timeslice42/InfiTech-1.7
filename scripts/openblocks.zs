@@ -2,24 +2,34 @@
 // --- Modified by DarknessShadow ---
 
 # Aliases
-var pulsatingCrystal  = <EnderIO:itemMaterial:5>;
-var hopper            = <minecraft:hopper>;
-var vacuumHopper      = <OpenBlocks:vacuumhopper>;
+var advbuildingguide  = <OpenBlocks:builder_guide>;
 var blockPlacer       = <OpenBlocks:blockPlacer>;
 var blockbreaker      = <OpenBlocks:blockbreaker>;
+var builderswand      = <ExtraUtilities:builderswand>;
+var craneBackpack     = <OpenBlocks:craneBackpack>;
+var craneControl      = <OpenBlocks:craneControl>;
+var craneEngine       = <OpenBlocks:generic:2>;
+var craneMagnet       = <OpenBlocks:generic:3>;
+var dustRedstone      = <ore:dustRedstone>;
 var elevator          = <OpenBlocks:elevator>;
 var elevatorRotating  = <OpenBlocks:elevator_rotating>;
 var fan               = <OpenBlocks:fan>;
-var sponge            = <OpenBlocks:sponge>;
-var spongeonastick    = <OpenBlocks:spongeonastick>;
+var glass             = <minecraft:glass>;
 var gliderwing        = <OpenBlocks:generic>;
 var hangglider        = <OpenBlocks:hangglider>;
-var craneBackpack     = <OpenBlocks:craneBackpack>;
-var craneControl      = <OpenBlocks:craneControl>;
-var craneMagnet       = <OpenBlocks:generic:3>;
-var craneEngine       = <OpenBlocks:generic:2>;
+var hopper            = <minecraft:hopper>;
 var luggage           = <OpenBlocks:luggage>;
 var paintbrush        = <OpenBlocks:paintBrush>;
+var paneGlass         = <ore:paneGlass>;
+var pulsatingCrystal  = <EnderIO:itemMaterial:5>;
+var redstone          = <minecraft:redstone>;
+var slimalyzer        = <OpenBlocks:slimalyzer>;
+var slimeball         = <ore:slimeball>;
+var sponge            = <OpenBlocks:sponge>;
+var spongeonastick    = <OpenBlocks:spongeonastick>;
+var steelItemCasing   = <IC2:itemCasing:5>;
+var torch             = <minecraft:torch>;
+var vacuumHopper      = <OpenBlocks:vacuumhopper>;
 
 # Recipe Tweaks
 recipes.remove(vacuumHopper);
@@ -72,3 +82,15 @@ recipes.addShaped(paintbrush,
   [[<ore:blockWool>, null, null],
   [<ore:craftingToolFile>, <Forestry:oakStick>, null],
   [null, null, <ore:woodStickSealed>]]);
+  
+recipes.remove(slimalyzer);
+recipes.addShaped(slimalyzer, [
+    [steelItemCasing, paneGlass, steelItemCasing],
+    [steelItemCasing, slimeball, steelItemCasing],
+    [steelItemCasing, dustRedstone, steelItemCasing]]);
+
+recipes.remove(advbuildingguide);
+recipes.addShaped(advbuildingguide,
+    [[glass, redstone, glass],
+    [builderswand, torch, builderswand],
+    [glass, redstone, glass]]);
