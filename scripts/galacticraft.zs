@@ -25,7 +25,7 @@ var cableSealableFibre = <GalacticraftCore:tile.enclosed:5>;
 var cableSealableGold = <GalacticraftCore:tile.enclosed:3>;
 var cableSealableHV = <GalacticraftCore:tile.enclosed:4>;
 var cableSealableTin = <GalacticraftCore:tile.enclosed:6>;
-var CompressedAl = <ore:compressedAluminium>;
+var CompressedAl = <GalacticraftCore:item.basicItem:8>;
 var CompressedBronze = <ore:compressedBronze>;
 var CompressedCopper = <ore:compressedCopper>;
 var CompressedIron = <ore:compressedIron>;
@@ -532,11 +532,6 @@ recipes.addShaped(<GalacticraftCore:item.oxygenTankLightFull:900>, [
 
 recipes.addShaped(<GalacticraftCore:item.oxygenTankLightFull:900>, [
 [CompressedAl, OxygenPipe,CompressedAl],
-[CompressedAl, <IC2:itemFluidCell>, CompressedAl],
-[CompressedAl, CompressedAl, CompressedAl]]);
-
-recipes.addShaped(<GalacticraftCore:item.oxygenTankLightFull:900>, [
-[CompressedAl, OxygenPipe,CompressedAl],
 [CompressedAl, <GalacticraftCore:item.canister>, CompressedAl],
 [CompressedAl, CompressedAl, CompressedAl]]);
 
@@ -1030,3 +1025,12 @@ oreDict.buggy.add(<GalacticraftCore:item.buggy>);
 oreDict.buggy.add(<GalacticraftCore:item.buggy:1>);
 oreDict.buggy.add(<GalacticraftCore:item.buggy:2>);
 oreDict.buggy.add(<GalacticraftCore:item.buggy:3>);
+
+// Workarounds
+# Compressed Aluminium Plates
+ImplosionCompressor.addRecipe([CompressedAl, <gregtech:gt.metaitem.01:816>], <gregtech:gt.metaitem.01:17019> * 2, 1);
+# Heavy Duty Plates
+recipes.addShaped(<gregtech:gt.metaitem.01:32462>, [
+    [SSteelBolt, HHammer, SSteelBolt],
+    [CompressedBronze, CompressedAl, CompressedSteel],
+    [SSteelBolt, null, SSteelBolt]]);
