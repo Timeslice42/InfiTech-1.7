@@ -174,7 +174,7 @@ var dragonEgg           = <minecraft:dragon_egg>;
 var eel                 = <harvestcraft:eelrawItem>;
 var cakePineapple       = <harvestcraft:pineappleupsidedowncakeItem>;
 var eyeGolden           = <OpenBlocks:goldenEye:0>;
-var chargedFirestone    = <Railcraft:firestone.refined>;
+var EShiftedFirestone   = <InfinityCore:itemKami:4>;
 var gardenGrass         = <harvestcraft:grassgarden>;
 var beeQueen            = <Forestry:beeQueenGE>;
 var clayBall            = <minecraft:clay_ball>;
@@ -255,7 +255,7 @@ Warp.addToResearch("IT_ICHOR", 5);
 Research.setConcealed("IT_ICHOR", true);
 
 Research.addPage("IT_ICHOR", "infitech.research_page.IT_ICHOR.1");
-game.setLocalization("infitech.research_page.IT_ICHOR.1", 'Through extensive study in all subjects of thaumaturgy you have discovered a substance that is what you consider to be the next step in your endeavours. This extremely powerful substance, which you call "Ichor" catalyzes a soul with the raw awakened power of a nether star.<BR><BR>While you would be best using using the soul of a god they are so rare that you could go your life without seeing one, by adding a drop of blood, the power of the otherworld, and a cider worthy of Notch himself you can draw in the power to make up the difference.');
+game.setLocalization("infitech.research_page.IT_ICHOR.1", 'Through extensive study in all subjects of thaumaturgy you have discovered a substance that is what you consider to be the next step in your endeavours. This extremely powerful substance, which you call "Ichor" catalyzes a soul with the raw awakened power of a nether star.<BR><BR>While you would be best using using the soul of a god they are so rare that you could go your life without seeing one, by adding a drop of blood, the power of the otherworld, and a cider fermented from the juice of a Notch apple you can draw in the power to make up the difference.');
 Infusion.addRecipe("IT_ICHOR", soulFragmentDeity, [silverfishBlood, netherStar], "humanus 1, lux 1, spiritus 2", ichor * 127, 0);
 Research.addInfusionPage("IT_ICHOR", ichor);
 Infusion.removeRecipe(ichor);
@@ -422,8 +422,8 @@ Research.refreshResearchRecipe("ICHORCLOTH_CHEST_GEM");
 
 Research.clearPrereqs("ICHORCLOTH_LEGS_GEM");
 Research.addPrereq("ICHORCLOTH_LEGS_GEM", "ICHORCLOTH_ARMOR", false);
-Infusion.addRecipe("ICHORCLOTH_LEGS_GEM", legsIchor, [rubyExquisite, ichor, ichor, thaumonomicon, focusPrimal, fluxLegs, potionFResistLong, focusEfreet, nitorHyper, chargedFirestone, dragonEgg, igneousRock], "nebrisum 32, ignis 128, sano 64, lucrum 32, potentia 64, alienis 32, lux 128, tutamen 128", legsIchorGem, 30);
-Infusion.addRecipe("ICHORCLOTH_LEGS_GEM", legsIchor, [rubyExquisite, ichor, ichor, thaumonomicon, focusPrimal, fluxLegs, potionFResistLong2, focusEfreet, nitorHyper, chargedFirestone, dragonEgg, igneousRock], "nebrisum 32, ignis 128, sano 64, lucrum 32, potentia 64, alienis 32, lux 128, tutamen 128", legsIchorGem, 30);
+Infusion.addRecipe("ICHORCLOTH_LEGS_GEM", legsIchor, [rubyExquisite, ichor, ichor, thaumonomicon, focusPrimal, fluxLegs, potionFResistLong, focusEfreet, nitorHyper, EShiftedFirestone, dragonEgg, igneousRock], "nebrisum 32, ignis 128, sano 64, lucrum 32, potentia 64, alienis 32, lux 128, tutamen 128", legsIchorGem, 30);
+Infusion.addRecipe("ICHORCLOTH_LEGS_GEM", legsIchor, [rubyExquisite, ichor, ichor, thaumonomicon, focusPrimal, fluxLegs, potionFResistLong2, focusEfreet, nitorHyper, EShiftedFirestone, dragonEgg, igneousRock], "nebrisum 32, ignis 128, sano 64, lucrum 32, potentia 64, alienis 32, lux 128, tutamen 128", legsIchorGem, 30);
 Research.refreshResearchRecipe("ICHORCLOTH_LEGS_GEM");
 
 Research.clearPrereqs("ICHORCLOTH_BOOTS_GEM");
