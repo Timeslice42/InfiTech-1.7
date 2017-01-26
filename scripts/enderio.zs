@@ -52,7 +52,7 @@ var conduitInsulatedRedstone = <EnderIO:itemRedstoneConduit:2>;
 var conduitItem = <EnderIO:itemItemConduit>;
 var conduitRedstone = <EnderIO:itemRedstoneConduit>;
 var conduitRedstoneInsulated = <EnderIO:itemRedstoneConduit:2>;
-var coordinateSelector = <EnderIO:itemCoordSelector>;
+var coordinateSelector = <EnderIO:itemCoordSelector>.withTag({"bc:x": 0, default: 1 as byte, "bc:y": 0, "bc:z": 0});
 var craftingFurnace = <ore:craftingFurnace>;
 var craftingGrinder = <ore:craftingGrinder>;
 var crystalEnder = <EnderIO:itemMaterial:8>;
@@ -267,9 +267,9 @@ recipes.addShaped(probeConduit, [
 	[plateSilicon, conduitRedstoneInsulated, plateSilicon]]);
 recipes.remove(itemBuffer);
 recipes.addShaped(itemBuffer, [
-	[itemIngotIron, ingotSteel, itemIngotIron],
-	[ingotSteel, chest, ingotSteel],
-	[itemIngotIron, ingotSteel, itemIngotIron]]);
+	[plateSteel, conduitItem, plateSteel],
+	[conduitItem, chest, conduitItem],
+	[plateSteel, conduitItem, plateSteel]]);
 recipes.remove(paintingMachine);
 recipes.addShaped(paintingMachine, [
 	[netherQuartz, netherQuartz, netherQuartz],
