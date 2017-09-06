@@ -1543,7 +1543,7 @@ Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:11>);
 Arcane.addShaped("VISPOWER", <Thaumcraft:blockStoneDevice:11>, "ignis 32, aer 32, perditio 32", [[<ore:blockRedstone>, <gregtech:gt.metaitem.01:32681>, <ore:blockRedstone>], [<ore:dustSmallNaquadah>, <Thaumcraft:blockStoneDevice:9>, <ore:dustSmallNaquadah>], [<ore:blockRedstone>, <gregtech:gt.metaitem.01:32691>, <ore:blockRedstone>]]);
 Research.addArcanePage("VISPOWER", <Thaumcraft:blockStoneDevice:11>);
 Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:11>);
-Arcane.addShaped("VISPOWER", <Thaumcraft:blockStoneDevice:11>, "ignis 32, aer 32, perditio 32", [[<ore:blockRedstone>, <gregtech:gt.metaitem.01:32681>, <ore:blockRedstone>], [<Thaumcraft:FocusPech>, <Thaumcraft:blockStoneDevice:9>, <Thaumcraft:FocusPech>], [<ore:blockRedstone>, <gregtech:gt.metaitem.01:32691>, <ore:blockRedstone>]]);
+Arcane.addShaped("VISPOWER", <Thaumcraft:blockStoneDevice:11>, "ignis 32, aer 32, perditio 32", [[<ore:blockRedstone>, <Thaumcraft:FocusPech>, <ore:blockRedstone>], [<gregtech:gt.metaitem.01:32681>, <Thaumcraft:blockStoneDevice:9>, <gregtech:gt.metaitem.01:32691>], [<ore:blockRedstone>, null, <ore:blockRedstone>]]);
 Research.addArcanePage("VISPOWER", <Thaumcraft:blockStoneDevice:11>);
 Arcane.addShaped("VISPOWER", <Thaumcraft:blockStoneDevice:11>, "ignis 32, aer 32, perditio 32", [[<ore:blockRedstone>, <gregtech:gt.metaitem.01:32681>, <ore:blockRedstone>], [<ore:dustSmallNaquadah>, <Thaumcraft:blockStoneDevice:9>, <ore:dustSmallNaquadah>], [<ore:blockRedstone>, <gregtech:gt.metaitem.01:32691>, <ore:blockRedstone>]]);
 Research.addPage("VISPOWER", "tc.research_page.VISPOWER.2");

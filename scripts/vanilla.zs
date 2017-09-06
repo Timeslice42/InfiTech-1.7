@@ -60,7 +60,7 @@ potionHealing.add(<minecraft:potion:8229>);
 recipes.remove(chestEnder);
 recipes.addShaped(chestEnder, [
 	[plateObsidian, plateObsidian, plateObsidian],
-	[ingotEnderium, teleporter, ingotEnderium],
+	[ingotEnderium, null, ingotEnderium],
 	[plateObsidian, plateObsidian, plateObsidian]]);
 recipes.removeShapeless(blazePowder, [blazeRod]);
 recipes.addShapeless(blazePowder, [blazeRod]);
